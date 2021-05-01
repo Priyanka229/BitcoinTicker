@@ -1,0 +1,33 @@
+ext {
+    bitcoinVersionCode = 1
+    bitcoinVersionName = '1.0.0'
+    bitcoinMinSdkVersion = 16
+    bitcoinTargetSdkVersion = 30
+    bitcoinCompileSdkVersion = 30
+    bitcoinBuildToolsVersion = '30.0.0'
+
+    bitcoinKTXVersion = '1.3.2'
+
+    bitcoinAppCompatVersion = '1.2.0'
+    bitcoinMaterialVersion = '1.3.0'
+    bitcoinConstraintlayoutVersion = '2.0.4'
+
+    bitcoinCoroutineCoreVersion = '1.3.8'
+    cbitcoinCoroutineAndroidVersion = '1.4.1'
+
+    bitcoinLifecycleExtensionsVersion = '2.2.0'
+    bitcoinViewModelVersion = '2.3.0'
+
+    bitcoinRetrofitVersion = '2.9.0'
+    bitcoinRetrofitIntercepterVersion = '4.9.0'
+
+    bitcoinRoomVersion = '2.2.6'
+
+    bitcoinJUnitVersion = '4.13.2'
+    bitcoinMockitoVersion = '3.7.7'
+    bitcoinCoreTestingVersion = '2.1.0'
+    bitcoinCoroutineTestVersion = '1.3.9'
+    bitcoinAndroidJUnitVersion = '1.1.2'
+    bitcoinExpressionVersion = '3.3.0'
+    bitcoinDebugFragment_version = '1.3.0'
+}

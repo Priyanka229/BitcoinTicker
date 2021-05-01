@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+apply from: "../bitcoin_versions.gradle"
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.android.bitcointicker"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding { enabled = true}
+}
+
+dependencies {
+
+    /**
+     * kotlin
+     */
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$bitcoinKTXVersion"
+
+    /** layout */
+    implementation "androidx.appcompat:appcompat:$bitcoinAppCompatVersion"
+    implementation "com.google.android.material:material:$bitcoinMaterialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$bitcoinConstraintlayoutVersion"
+
+    /**
+     * coroutine
+     */
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$bitcoinCoroutineCoreVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$cbitcoinCoroutineAndroidVersion"
+
+    /**
+     * view model
+     */
+    implementation "androidx.lifecycle:lifecycle-extensions:$bitcoinLifecycleExtensionsVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$bitcoinViewModelVersion"
+
+    /**
+     retrofit
+     */
+    api "com.squareup.retrofit2:retrofit:${bitcoinRetrofitVersion}"
+    api "com.squareup.retrofit2:converter-gson:${bitcoinRetrofitVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${bitcoinRetrofitIntercepterVersion}"
+
+    /**
+     *  room db
+     */
+    implementation "androidx.room:room-runtime:$bitcoinRoomVersion"
+    kapt "androidx.room:room-compiler:$bitcoinRoomVersion"
+
+    kapt "com.android.databinding:compiler:3.0.1"
+}

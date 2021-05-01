@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BitcoinTicker</string>
+    <string name="network_unavailable_message">Sorry, the network is unavailable. Check you network connection</string>
+    <string name="something_went_wrong">Something went wrong, please try again in sometime</string>
+    <string name="no_data">No Data available</string>
+    <string name="parse_error">Parse error</string>
+    <string name="socket_time_out">Can not connect to server, please try in sometime</string>
+</resources>
